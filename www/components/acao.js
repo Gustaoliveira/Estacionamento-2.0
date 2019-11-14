@@ -34,6 +34,7 @@ $(document).on("click","#cadastro",function(){
   });
 });
 
+// ---------------------------------------- LISTA --------------------------------------------
 
 function carregaLista(){
     $.ajax({
@@ -80,7 +81,7 @@ $(document).on("change","#lista",function(){
     });
 });
 
-
+// ---------------------- Valor a Pagar ------------------------------
 
 function preencheHora(){
     var hora = "";
@@ -96,13 +97,13 @@ function preencheHora(){
 }
 
 $(document).on("click","#pagar",function(){
-  var horaEntrada =parseFloat($("option:input",("#horario")).val());
-  var horaSaida = parseFloat($("option:input",("#hora")).val());
+  var horaEntrada =parseFloat($("#horario").val());
+  var horaSaida = parseFloat($("#hora").val());
 
-  
   var total = ((horario) - (hora)) * 3;
   var url = "final.html";
-$(location).attr('#pagar',url);
+  $(location).attr('#pagar',url);
   
 
 });
+
